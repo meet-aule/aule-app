@@ -1,0 +1,10 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    # Written by gen-l10n on the first `flutter pub get`; never hand-edited.
+    - lib/core/l10n/app_localizations*.dart
+
+linter:
+  rules:
+    avoid_print: true

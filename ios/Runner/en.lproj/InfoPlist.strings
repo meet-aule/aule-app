@@ -1,0 +1,5 @@
+/* Permission prompts in English. */
+"NSBluetoothAlwaysUsageDescription" = "Aule uses Bluetooth only to find your Aule device and give it your Wi-Fi.";
+"NSCameraUsageDescription" = "Aule does not use the camera.";
+"NSLocalNetworkUsageDescription" = "Aule uses the local network only to connect the sound of a session you choose to join.";
+"NSMicrophoneUsageDescription" = "Aule uses the microphone only when you choose to talk in a session.";

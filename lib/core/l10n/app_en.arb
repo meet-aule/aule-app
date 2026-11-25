@@ -1,0 +1,1991 @@
+{
+  "@@locale": "en",
+  "appTitle": "Aule",
+  "@appTitle": {
+    "description": "Shared strings."
+  },
+  "commonContinue": "Continue",
+  "@commonContinue": {
+    "description": "Shared strings."
+  },
+  "commonCancel": "Cancel",
+  "@commonCancel": {
+    "description": "Shared strings."
+  },
+  "commonSave": "Save",
+  "@commonSave": {
+    "description": "Shared strings."
+  },
+  "commonSaving": "Saving",
+  "@commonSaving": {
+    "description": "Shared strings."
+  },
+  "commonSaved": "Saved.",
+  "@commonSaved": {
+    "description": "Shared strings."
+  },
+  "commonBack": "Back",
+  "@commonBack": {
+    "description": "Shared strings."
+  },
+  "commonRetry": "Try again",
+  "@commonRetry": {
+    "description": "Shared strings."
+  },
+  "commonDone": "Done",
+  "@commonDone": {
+    "description": "Shared strings."
+  },
+  "commonOptional": "optional",
+  "@commonOptional": {
+    "description": "Shared strings."
+  },
+  "commonLoading": "Loading",
+  "@commonLoading": {
+    "description": "Shared strings."
+  },
+  "commonToday": "Today",
+  "@commonToday": {
+    "description": "Shared strings."
+  },
+  "commonYesterday": "Yesterday",
+  "@commonYesterday": {
+    "description": "Shared strings."
+  },
+  "commonTodayInline": "today",
+  "@commonTodayInline": {
+    "description": "Shared strings. After a colon, such as \"Última sesión: hoy\"."
+  },
+  "commonYesterdayInline": "yesterday",
+  "@commonYesterdayInline": {
+    "description": "Shared strings. After a colon."
+  },
+  "commonPrivacyPolicy": "Privacy policy",
+  "@commonPrivacyPolicy": {
+    "description": "Shared strings."
+  },
+  "commonOpenSettings": "Open settings",
+  "@commonOpenSettings": {
+    "description": "Shared strings."
+  },
+  "commonWriteUs": "Write to admin@meetaule.com",
+  "@commonWriteUs": {
+    "description": "Shared strings."
+  },
+  "commonRatherNotSay": "I'd rather not say",
+  "@commonRatherNotSay": {
+    "description": "Shared strings."
+  },
+  "commonYes": "on",
+  "@commonYes": {
+    "description": "Shared strings."
+  },
+  "commonNo": "off",
+  "@commonNo": {
+    "description": "Shared strings."
+  },
+  "greeting": "Hi, {name}",
+  "@greeting": {
+    "description": "Shared strings.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "languageEs": "Español",
+  "@languageEs": {
+    "description": "Shared strings."
+  },
+  "languageEn": "English",
+  "@languageEn": {
+    "description": "Shared strings."
+  },
+  "errorNetwork": "We couldn't connect. Check your internet and try again.",
+  "@errorNetwork": {
+    "description": "Shared strings."
+  },
+  "errorUnavailable": "Aule isn't available right now. Try again in a few minutes.",
+  "@errorUnavailable": {
+    "description": "Shared strings."
+  },
+  "errorGeneric": "Something went wrong. Try again.",
+  "@errorGeneric": {
+    "description": "Shared strings."
+  },
+  "errorSignedOut": "You were signed out. Sign in again with your email.",
+  "@errorSignedOut": {
+    "description": "Shared strings."
+  },
+  "errorNotFound": "We can't find this anymore. It may have been deleted.",
+  "@errorNotFound": {
+    "description": "Shared strings."
+  },
+  "demoBanner": "Demo mode: nothing leaves this phone.",
+  "@demoBanner": {
+    "description": "Shared strings."
+  },
+  "versionLine": "Version {version}",
+  "@versionLine": {
+    "description": "Shared strings.",
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "tabProgress": "Progress",
+  "@tabProgress": {
+    "description": "Shared strings."
+  },
+  "tabFamily": "Family",
+  "@tabFamily": {
+    "description": "Shared strings."
+  },
+  "tabPrivacy": "Privacy",
+  "@tabPrivacy": {
+    "description": "Shared strings."
+  },
+  "gradeP1": "Primary, grade 1",
+  "@gradeP1": {
+    "description": "Labels for server codes."
+  },
+  "gradeP2": "Primary, grade 2",
+  "@gradeP2": {
+    "description": "Labels for server codes."
+  },
+  "gradeP3": "Primary, grade 3",
+  "@gradeP3": {
+    "description": "Labels for server codes."
+  },
+  "gradeP4": "Primary, grade 4",
+  "@gradeP4": {
+    "description": "Labels for server codes."
+  },
+  "gradeP5": "Primary, grade 5",
+  "@gradeP5": {
+    "description": "Labels for server codes."
+  },
+  "gradeP6": "Primary, grade 6",
+  "@gradeP6": {
+    "description": "Labels for server codes."
+  },
+  "gradeS1": "Secondary, year 1",
+  "@gradeS1": {
+    "description": "Labels for server codes."
+  },
+  "gradeS2": "Secondary, year 2",
+  "@gradeS2": {
+    "description": "Labels for server codes."
+  },
+  "gradeS3": "Secondary, year 3",
+  "@gradeS3": {
+    "description": "Labels for server codes."
+  },
+  "gradeS4": "Secondary, year 4",
+  "@gradeS4": {
+    "description": "Labels for server codes."
+  },
+  "gradeS5": "Secondary, year 5",
+  "@gradeS5": {
+    "description": "Labels for server codes."
+  },
+  "subjectMatematica": "Math",
+  "@subjectMatematica": {
+    "description": "Labels for server codes."
+  },
+  "subjectComunicacion": "Language arts",
+  "@subjectComunicacion": {
+    "description": "Labels for server codes."
+  },
+  "subjectCiencia": "Science and technology",
+  "@subjectCiencia": {
+    "description": "Labels for server codes."
+  },
+  "subjectPersonalSocial": "Personal and social studies",
+  "@subjectPersonalSocial": {
+    "description": "Labels for server codes."
+  },
+  "subjectIngles": "English",
+  "@subjectIngles": {
+    "description": "Labels for server codes."
+  },
+  "subjectOther": "Another subject",
+  "@subjectOther": {
+    "description": "Labels for server codes."
+  },
+  "personaCalido": "Warm",
+  "@personaCalido": {
+    "description": "Labels for server codes."
+  },
+  "personaCalidoHint": "warm and patient",
+  "@personaCalidoHint": {
+    "description": "Labels for server codes."
+  },
+  "personaJugueton": "Playful",
+  "@personaJugueton": {
+    "description": "Labels for server codes."
+  },
+  "personaJuguetonHint": "with a light sense of humor",
+  "@personaJuguetonHint": {
+    "description": "Labels for server codes."
+  },
+  "personaAventurero": "Adventurous",
+  "@personaAventurero": {
+    "description": "Labels for server codes."
+  },
+  "personaAventureroHint": "every topic is a challenge to discover",
+  "@personaAventureroHint": {
+    "description": "Labels for server codes."
+  },
+  "personaTranquilo": "Calm",
+  "@personaTranquilo": {
+    "description": "Labels for server codes."
+  },
+  "personaTranquiloHint": "unhurried, never rushed",
+  "@personaTranquiloHint": {
+    "description": "Labels for server codes."
+  },
+  "personaTone": "{persona} tone",
+  "@personaTone": {
+    "description": "Labels for server codes.",
+    "placeholders": {
+      "persona": {
+        "type": "String"
+      }
+    }
+  },
+  "relationshipMth": "Mom",
+  "@relationshipMth": {
+    "description": "Labels for server codes."
+  },
+  "relationshipFth": "Dad",
+  "@relationshipFth": {
+    "description": "Labels for server codes."
+  },
+  "relationshipStpmth": "Stepmother",
+  "@relationshipStpmth": {
+    "description": "Labels for server codes."
+  },
+  "relationshipStpfth": "Stepfather",
+  "@relationshipStpfth": {
+    "description": "Labels for server codes."
+  },
+  "relationshipGrmth": "Grandmother",
+  "@relationshipGrmth": {
+    "description": "Labels for server codes."
+  },
+  "relationshipGrfth": "Grandfather",
+  "@relationshipGrfth": {
+    "description": "Labels for server codes."
+  },
+  "relationshipAunt": "Aunt",
+  "@relationshipAunt": {
+    "description": "Labels for server codes."
+  },
+  "relationshipUncle": "Uncle",
+  "@relationshipUncle": {
+    "description": "Labels for server codes."
+  },
+  "relationshipSib": "Brother or sister",
+  "@relationshipSib": {
+    "description": "Labels for server codes."
+  },
+  "relationshipGuard": "Legal guardian",
+  "@relationshipGuard": {
+    "description": "Labels for server codes."
+  },
+  "relationshipFammemb": "Other family member",
+  "@relationshipFammemb": {
+    "description": "Labels for server codes."
+  },
+  "endReasonChildEnded": "{nickname} ended it",
+  "@endReasonChildEnded": {
+    "description": "Labels for server codes.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "endReasonIdle": "Closed because no one was talking",
+  "@endReasonIdle": {
+    "description": "Labels for server codes."
+  },
+  "endReasonBudgetReached": "Its time ran out",
+  "@endReasonBudgetReached": {
+    "description": "Labels for server codes."
+  },
+  "endReasonParentEnded": "An adult ended it",
+  "@endReasonParentEnded": {
+    "description": "Labels for server codes."
+  },
+  "endReasonDeviceOffline": "The device went offline",
+  "@endReasonDeviceOffline": {
+    "description": "Labels for server codes."
+  },
+  "endReasonNotWorking": "Aule closed it early",
+  "@endReasonNotWorking": {
+    "description": "Labels for server codes."
+  },
+  "endReasonError": "It stopped because of a technical problem",
+  "@endReasonError": {
+    "description": "Labels for server codes."
+  },
+  "endReasonOther": "Ended",
+  "@endReasonOther": {
+    "description": "Labels for server codes."
+  },
+  "flagDistress": "Had a hard moment",
+  "@flagDistress": {
+    "description": "Labels for server codes."
+  },
+  "flagSafetyConcern": "Needs your attention",
+  "@flagSafetyConcern": {
+    "description": "Labels for server codes."
+  },
+  "flagStruggling": "Found it hard",
+  "@flagStruggling": {
+    "description": "Labels for server codes."
+  },
+  "flagDisengaged": "Found it hard to focus",
+  "@flagDisengaged": {
+    "description": "Labels for server codes."
+  },
+  "reasonReviewDue": "To review",
+  "@reasonReviewDue": {
+    "description": "Labels for server codes."
+  },
+  "reasonInProgress": "In practice",
+  "@reasonInProgress": {
+    "description": "Labels for server codes."
+  },
+  "reasonReady": "Next up",
+  "@reasonReady": {
+    "description": "Labels for server codes."
+  },
+  "reasonAsked": "What the family asked for",
+  "@reasonAsked": {
+    "description": "Labels for server codes."
+  },
+  "noticeKindSessionSummary": "Summary",
+  "@noticeKindSessionSummary": {
+    "description": "Labels for server codes."
+  },
+  "noticeKindAttention": "Needs your attention",
+  "@noticeKindAttention": {
+    "description": "Labels for server codes."
+  },
+  "noticeKindSessionStopped": "Session closed early",
+  "@noticeKindSessionStopped": {
+    "description": "Labels for server codes."
+  },
+  "noticeKindOther": "Notice",
+  "@noticeKindOther": {
+    "description": "Labels for server codes."
+  },
+  "memoryKindFact": "A fact",
+  "@memoryKindFact": {
+    "description": "Labels for server codes."
+  },
+  "memoryKindPreference": "Likes",
+  "@memoryKindPreference": {
+    "description": "Labels for server codes."
+  },
+  "memoryKindStruggle": "Finds hard",
+  "@memoryKindStruggle": {
+    "description": "Labels for server codes."
+  },
+  "memoryKindSuccess": "An achievement",
+  "@memoryKindSuccess": {
+    "description": "Labels for server codes."
+  },
+  "memoryKindSummary": "Summary",
+  "@memoryKindSummary": {
+    "description": "Labels for server codes."
+  },
+  "objectiveHomework": "Homework",
+  "@objectiveHomework": {
+    "description": "Labels for server codes."
+  },
+  "objectiveExamPrep": "Preparing for a test",
+  "@objectiveExamPrep": {
+    "description": "Labels for server codes."
+  },
+  "objectiveExamReview": "Reviewing a test",
+  "@objectiveExamReview": {
+    "description": "Labels for server codes."
+  },
+  "objectiveExplore": "Exploring",
+  "@objectiveExplore": {
+    "description": "Labels for server codes."
+  },
+  "objectiveHomeworkIn": "Homework: {subject}",
+  "@objectiveHomeworkIn": {
+    "description": "Labels for server codes.",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "objectiveExamPrepIn": "Preparing for a test: {subject}",
+  "@objectiveExamPrepIn": {
+    "description": "Labels for server codes.",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "objectiveExamReviewIn": "Reviewing a test: {subject}",
+  "@objectiveExamReviewIn": {
+    "description": "Labels for server codes.",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "objectiveExploreIn": "Exploring: {subject}",
+  "@objectiveExploreIn": {
+    "description": "Labels for server codes.",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "signInGreeting": "Welcome",
+  "@signInGreeting": {
+    "description": "Loading and sign-in."
+  },
+  "signInTitle": "Sign in to your account",
+  "@signInTitle": {
+    "description": "Loading and sign-in."
+  },
+  "signInHelp": "You don't need to create a password.",
+  "@signInHelp": {
+    "description": "Loading and sign-in."
+  },
+  "signInWithEmail": "With my email (we'll send you a code)",
+  "@signInWithEmail": {
+    "description": "Loading and sign-in."
+  },
+  "signInWithGoogle": "Continue with Google",
+  "@signInWithGoogle": {
+    "description": "Loading and sign-in."
+  },
+  "signInPrivacyNote": "We use your email only for your account and your notices.",
+  "@signInPrivacyNote": {
+    "description": "Loading and sign-in."
+  },
+  "signInGoogleFailed": "We couldn't sign you in with that Google account. Try again, or sign in with your email.",
+  "@signInGoogleFailed": {
+    "description": "Loading and sign-in."
+  },
+  "emailTitle": "What's your email?",
+  "@emailTitle": {
+    "description": "Loading and sign-in."
+  },
+  "emailHelp": "We'll send you a code to sign in.",
+  "@emailHelp": {
+    "description": "Loading and sign-in."
+  },
+  "emailLabel": "Your email",
+  "@emailLabel": {
+    "description": "Loading and sign-in."
+  },
+  "emailHint": "name@email.com",
+  "@emailHint": {
+    "description": "Loading and sign-in."
+  },
+  "emailInvalid": "Check the address: it doesn't look like an email.",
+  "@emailInvalid": {
+    "description": "Loading and sign-in."
+  },
+  "emailSend": "Send me a code",
+  "@emailSend": {
+    "description": "Loading and sign-in."
+  },
+  "codeSendFailed": "We couldn't send the code. Try again in a moment.",
+  "@codeSendFailed": {
+    "description": "Loading and sign-in."
+  },
+  "codeTitle": "Type the code we sent you",
+  "@codeTitle": {
+    "description": "Loading and sign-in."
+  },
+  "codeHelp": "We sent it to {email}. You can paste it. It arrives within a minute.",
+  "@codeHelp": {
+    "description": "Loading and sign-in.",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "codeLabel": "6-digit code",
+  "@codeLabel": {
+    "description": "Loading and sign-in."
+  },
+  "codeIncomplete": "Type all six digits of the code.",
+  "@codeIncomplete": {
+    "description": "Loading and sign-in."
+  },
+  "codeWrong": "That code is wrong or has expired. Ask for a new one if you need to.",
+  "@codeWrong": {
+    "description": "Loading and sign-in."
+  },
+  "codeCheckFailed": "We couldn't check the code. Try again in a moment.",
+  "@codeCheckFailed": {
+    "description": "Loading and sign-in."
+  },
+  "codeResend": "Send it again",
+  "@codeResend": {
+    "description": "Loading and sign-in."
+  },
+  "codeResent": "We sent you a new code.",
+  "@codeResent": {
+    "description": "Loading and sign-in."
+  },
+  "codeMissing": "The email isn't arriving",
+  "@codeMissing": {
+    "description": "Loading and sign-in."
+  },
+  "codeDemoHint": "In the demo, the code is 123456.",
+  "@codeDemoHint": {
+    "description": "Loading and sign-in."
+  },
+  "nameTitle": "What's your name?",
+  "@nameTitle": {
+    "description": "Loading and sign-in."
+  },
+  "nameHelp": "This is the first time you've signed in with this email. We'll create your account with your name.",
+  "@nameHelp": {
+    "description": "Loading and sign-in."
+  },
+  "nameLabel": "Your name",
+  "@nameLabel": {
+    "description": "Loading and sign-in."
+  },
+  "nameHint": "E.g. Ana",
+  "@nameHint": {
+    "description": "Loading and sign-in."
+  },
+  "nameMissing": "Write your name to create your account.",
+  "@nameMissing": {
+    "description": "Loading and sign-in."
+  },
+  "nameCreate": "Create my account",
+  "@nameCreate": {
+    "description": "Loading and sign-in."
+  },
+  "emailHelpTitle": "Check your email",
+  "@emailHelpTitle": {
+    "description": "Loading and sign-in."
+  },
+  "emailHelpBody": "We sent you a code to sign in. If you don't see it, check your spam or promotions folder; it can take a minute.",
+  "@emailHelpBody": {
+    "description": "Loading and sign-in."
+  },
+  "emailHelpSentTo": "We sent it to {email}",
+  "@emailHelpSentTo": {
+    "description": "Loading and sign-in.",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "emailHelpStillMissing": "Still not there? Write to us and we'll help you sign in.",
+  "@emailHelpStillMissing": {
+    "description": "Loading and sign-in."
+  },
+  "emailHelpOtherEmail": "Try another email",
+  "@emailHelpOtherEmail": {
+    "description": "Loading and sign-in."
+  },
+  "startTitle": "Let's start with your child",
+  "@startTitle": {
+    "description": "Start and adding a child."
+  },
+  "startHelp": "First we ask for your permission. Then a few details so Aule gets to know them.",
+  "@startHelp": {
+    "description": "Start and adding a child."
+  },
+  "startGo": "Start",
+  "@startGo": {
+    "description": "Start and adding a child."
+  },
+  "startLater": "Not now",
+  "@startLater": {
+    "description": "Start and adding a child."
+  },
+  "consentStep": "Step 1 of 2",
+  "@consentStep": {
+    "description": "Start and adding a child."
+  },
+  "consentTitle": "Before we start, your permission",
+  "@consentTitle": {
+    "description": "Start and adding a child."
+  },
+  "consentHelp": "Aule is a voice tutor for your child. We need your permission before we create their profile.",
+  "@consentHelp": {
+    "description": "Start and adding a child."
+  },
+  "consentVoice": "I am their parent or legal guardian, and I allow Aule to process their voice to talk with them and, if they use the camera, the pictures of their notebook to check their exercises.",
+  "@consentVoice": {
+    "description": "Start and adding a child."
+  },
+  "consentKeepToggle": "What we keep",
+  "@consentKeepToggle": {
+    "description": "Start and adding a child."
+  },
+  "consentAlwaysKept": "We always keep their profile, each session's details and summary, their progress and the notices, so you can follow their learning.",
+  "@consentAlwaysKept": {
+    "description": "Start and adding a child. Versioned consent text (kConsentPolicyVersion)."
+  },
+  "consentMemory": "Remember between sessions what they learn and what they like",
+  "@consentMemory": {
+    "description": "Start and adding a child."
+  },
+  "consentTranscripts": "Keep a written copy of each session's conversation",
+  "@consentTranscripts": {
+    "description": "Start and adding a child."
+  },
+  "consentNever": "Audio and video are never kept. You can change this whenever you like in Privacy.",
+  "@consentNever": {
+    "description": "Start and adding a child."
+  },
+  "consentAgree": "I give my permission",
+  "@consentAgree": {
+    "description": "Start and adding a child."
+  },
+  "profileStep": "Step 2 of 2",
+  "@profileStep": {
+    "description": "Start and adding a child."
+  },
+  "profileTitle": "Tell us about your child",
+  "@profileTitle": {
+    "description": "Start and adding a child."
+  },
+  "profileHelp": "Aule will call them this in their sessions. The rest is optional and only helps personalize them.",
+  "@profileHelp": {
+    "description": "Start and adding a child."
+  },
+  "childNameLabel": "What should we call them?",
+  "@childNameLabel": {
+    "description": "Start and adding a child."
+  },
+  "childNameHint": "E.g. Mati",
+  "@childNameHint": {
+    "description": "Start and adding a child."
+  },
+  "childNameMissing": "Write what we should call them.",
+  "@childNameMissing": {
+    "description": "Start and adding a child."
+  },
+  "childGradeLabel": "Grade",
+  "@childGradeLabel": {
+    "description": "Start and adding a child."
+  },
+  "childRelationshipLabel": "How are you related to {nickname}?",
+  "@childRelationshipLabel": {
+    "description": "Start and adding a child.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "childRelationshipLabelGeneric": "Your relationship to the child",
+  "@childRelationshipLabelGeneric": {
+    "description": "Start and adding a child."
+  },
+  "childInterestsLabel": "What they like",
+  "@childInterestsLabel": {
+    "description": "Start and adding a child."
+  },
+  "childInterestSuggestions": "soccer, volleyball, dancing, music, drawing, video games, animals, dinosaurs, space, cooking, stories, inventions",
+  "@childInterestSuggestions": {
+    "description": "Start and adding a child."
+  },
+  "childInterestsAddHint": "Something else they like",
+  "@childInterestsAddHint": {
+    "description": "Start and adding a child."
+  },
+  "childInterestsAdd": "Add",
+  "@childInterestsAdd": {
+    "description": "Start and adding a child."
+  },
+  "childInterestsHelp": "Aule uses up to ten to shape its examples and exercises.",
+  "@childInterestsHelp": {
+    "description": "Start and adding a child."
+  },
+  "childInterestsTooMany": "Choose up to ten things they like.",
+  "@childInterestsTooMany": {
+    "description": "Start and adding a child."
+  },
+  "childLanguageLabel": "Session language",
+  "@childLanguageLabel": {
+    "description": "Start and adding a child."
+  },
+  "childSubjectsLabel": "Subjects you want to reinforce",
+  "@childSubjectsLabel": {
+    "description": "Start and adding a child."
+  },
+  "childPersonaLabel": "How Aule talks to them",
+  "@childPersonaLabel": {
+    "description": "Start and adding a child."
+  },
+  "childNoteLabel": "Something Aule should keep in mind",
+  "@childNoteLabel": {
+    "description": "Start and adding a child."
+  },
+  "childNoteHint": "E.g. gets frustrated quickly, go slowly",
+  "@childNoteHint": {
+    "description": "Start and adding a child."
+  },
+  "profileCreateFailed": "We couldn't save the profile. Try again.",
+  "@profileCreateFailed": {
+    "description": "Start and adding a child."
+  },
+  "profileConsentFailed": "We couldn't save your permission, so we didn't create the profile. Try again.",
+  "@profileConsentFailed": {
+    "description": "Start and adding a child."
+  },
+  "profileConsentKept": "We created {nickname}'s profile, but couldn't save your permission. Without it, Aule won't talk with {nickname}. Try again, or delete the profile.",
+  "@profileConsentKept": {
+    "description": "Start and adding a child. The profile exists but voice consent could not be recorded, and deleting it failed too.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "profileKeptDelete": "Delete {nickname}'s profile",
+  "@profileKeptDelete": {
+    "description": "Start and adding a child. Deletes a profile left without consent.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "profileKeptDeleted": "We deleted {nickname}'s profile.",
+  "@profileKeptDeleted": {
+    "description": "Start and adding a child.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "profileChoiceFailed": "We couldn't save one of your choices about what we keep. Check it in Privacy.",
+  "@profileChoiceFailed": {
+    "description": "Start and adding a child."
+  },
+  "addDoneStep": "Done",
+  "@addDoneStep": {
+    "description": "Start and adding a child."
+  },
+  "addDoneTitle": "{nickname} is now in your family",
+  "@addDoneTitle": {
+    "description": "Start and adding a child.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "addDoneHelp": "Once they have sessions, you'll see here what they practiced and what comes next.",
+  "@addDoneHelp": {
+    "description": "Start and adding a child."
+  },
+  "addDoneSetUpDevice": "Set up their Aule",
+  "@addDoneSetUpDevice": {
+    "description": "Start and adding a child."
+  },
+  "addDoneHome": "Go to home",
+  "@addDoneHome": {
+    "description": "Start and adding a child."
+  },
+  "familyTitle": "Family",
+  "@familyTitle": {
+    "description": "Family."
+  },
+  "familyChildren": "Children",
+  "@familyChildren": {
+    "description": "Family."
+  },
+  "familyAddChild": "Add a child",
+  "@familyAddChild": {
+    "description": "Family."
+  },
+  "familyNoChildren": "There are no children in your account yet. Add the first one to get started.",
+  "@familyNoChildren": {
+    "description": "Family."
+  },
+  "editTitle": "{nickname}'s settings",
+  "@editTitle": {
+    "description": "Family.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "editPrivacyLink": "{nickname}'s privacy",
+  "@editPrivacyLink": {
+    "description": "Family.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "editSaveFailed": "Couldn't save. Try again.",
+  "@editSaveFailed": {
+    "description": "Family."
+  },
+  "progressTitle": "Progress",
+  "@progressTitle": {
+    "description": "Progress."
+  },
+  "progressNoChildren": "Once you add your child, you'll see their progress here.",
+  "@progressNoChildren": {
+    "description": "Progress."
+  },
+  "progressNotices": "Notices",
+  "@progressNotices": {
+    "description": "Progress."
+  },
+  "progressUnread": "{count, plural, =0{No new notices} =1{1 new notice} other{{count} new notices}}",
+  "@progressUnread": {
+    "description": "Progress.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "progressLastSession": "Last session: {day}",
+  "@progressLastSession": {
+    "description": "Progress.",
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "progressNoSessions": "No sessions yet.",
+  "@progressNoSessions": {
+    "description": "Progress."
+  },
+  "progressSkillsLine": "{mastered, plural, =1{Has mastered 1 skill} other{Has mastered {mastered} skills}} and is practicing {practising} more.",
+  "@progressSkillsLine": {
+    "description": "Progress. At least one skill mastered and one being practised.",
+    "placeholders": {
+      "mastered": {
+        "type": "int"
+      },
+      "practising": {
+        "type": "int"
+      }
+    }
+  },
+  "progressSkillsMastered": "{count, plural, =1{Has mastered 1 skill.} other{Has mastered {count} skills.}}",
+  "@progressSkillsMastered": {
+    "description": "Progress. Skills mastered, none being practised.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "progressSkillsPractising": "{count, plural, =1{Is practicing 1 skill.} other{Is practicing {count} skills.}}",
+  "@progressSkillsPractising": {
+    "description": "Progress. Skills being practised, none mastered yet.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "progressNoExercises": "No exercises solved yet.",
+  "@progressNoExercises": {
+    "description": "Progress."
+  },
+  "childProgressKnows": "What they know",
+  "@childProgressKnows": {
+    "description": "Progress."
+  },
+  "childProgressMastered": "Has mastered",
+  "@childProgressMastered": {
+    "description": "Progress."
+  },
+  "childProgressPractising": "Is practicing",
+  "@childProgressPractising": {
+    "description": "Progress."
+  },
+  "childProgressNext": "Up next",
+  "@childProgressNext": {
+    "description": "Progress."
+  },
+  "childProgressSessions": "Latest sessions",
+  "@childProgressSessions": {
+    "description": "Progress."
+  },
+  "childProgressNotices": "Notices about {nickname}",
+  "@childProgressNotices": {
+    "description": "Progress.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "childProgressEmpty": "Once {nickname} has a first session, you'll see here what they did.",
+  "@childProgressEmpty": {
+    "description": "Progress.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "sessionNextStep": "Next time: {text}",
+  "@sessionNextStep": {
+    "description": "Progress.",
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "sessionMinutes": "{minutes, plural, =1{1 minute} other{{minutes} minutes}}",
+  "@sessionMinutes": {
+    "description": "Progress.",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sessionOnDevice": "On their Aule",
+  "@sessionOnDevice": {
+    "description": "Progress."
+  },
+  "sessionInBrowser": "In the browser",
+  "@sessionInBrowser": {
+    "description": "Progress."
+  },
+  "sessionInProgress": "In progress",
+  "@sessionInProgress": {
+    "description": "Progress."
+  },
+  "sessionSummaryPending": "The summary isn't ready yet.",
+  "@sessionSummaryPending": {
+    "description": "Progress."
+  },
+  "sessionDetailTitle": "Session on {day}",
+  "@sessionDetailTitle": {
+    "description": "Progress.",
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "noticesTitle": "Notices",
+  "@noticesTitle": {
+    "description": "Progress."
+  },
+  "noticesEmpty": "No notices yet.",
+  "@noticesEmpty": {
+    "description": "Progress."
+  },
+  "noticeUnread": "Unread",
+  "@noticeUnread": {
+    "description": "Progress."
+  },
+  "noticeSeeSession": "See the session",
+  "@noticeSeeSession": {
+    "description": "Progress."
+  },
+  "noticeAttentionHelp": "If you'd like to talk it over with someone at Aule, write to us at admin@meetaule.com.",
+  "@noticeAttentionHelp": {
+    "description": "Progress."
+  },
+  "privacyTitle": "Privacy",
+  "@privacyTitle": {
+    "description": "Privacy."
+  },
+  "privacyHelp": "What we keep, and what you decide.",
+  "@privacyHelp": {
+    "description": "Privacy."
+  },
+  "privacyWhatWeKeep": "We keep your name and your email. For each child we keep their profile, each session's details and summary, their progress and the notices, so you can follow their learning. What Aule remembers and written conversations are kept only if you choose. Audio and video are never kept.",
+  "@privacyWhatWeKeep": {
+    "description": "Privacy."
+  },
+  "privacyChildren": "Children",
+  "@privacyChildren": {
+    "description": "Privacy."
+  },
+  "privacyChildSummary": "Voice: {voice} · Memories: {memory} · Conversations: {transcripts}",
+  "@privacyChildSummary": {
+    "description": "Privacy.",
+    "placeholders": {
+      "voice": {
+        "type": "String"
+      },
+      "memory": {
+        "type": "String"
+      },
+      "transcripts": {
+        "type": "String"
+      }
+    }
+  },
+  "childPrivacyTitle": "{nickname}'s privacy",
+  "@childPrivacyTitle": {
+    "description": "Privacy.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "consentVoiceLabel": "Voice conversations",
+  "@consentVoiceLabel": {
+    "description": "Privacy."
+  },
+  "consentVoiceDesc": "Aule processes {nickname}'s voice to talk with them and, if they use the camera, the pictures of their notebook. Without this there are no sessions.",
+  "@consentVoiceDesc": {
+    "description": "Privacy.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "consentMemoryLabel": "Remember between sessions",
+  "@consentMemoryLabel": {
+    "description": "Privacy."
+  },
+  "consentMemoryDesc": "What they learn and what they like.",
+  "@consentMemoryDesc": {
+    "description": "Privacy."
+  },
+  "consentTranscriptsLabel": "Keep conversations in writing",
+  "@consentTranscriptsLabel": {
+    "description": "Privacy."
+  },
+  "consentTranscriptsDesc": "The text of each session.",
+  "@consentTranscriptsDesc": {
+    "description": "Privacy."
+  },
+  "childTeamNoteLabel": "Note from Aule's team",
+  "@childTeamNoteLabel": {
+    "description": "Privacy. The child's notes field, written by Aule's team."
+  },
+  "childTeamNoteHelp": "Aule's team writes it to guide the tutor. If you'd like it changed, write to us.",
+  "@childTeamNoteHelp": {
+    "description": "Privacy."
+  },
+  "withdrawVoiceTitle": "Withdraw voice permission?",
+  "@withdrawVoiceTitle": {
+    "description": "Privacy."
+  },
+  "withdrawVoiceBody": "{nickname} won't be able to have sessions until you give it again.",
+  "@withdrawVoiceBody": {
+    "description": "Privacy.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "sessionCloseNote": "If {nickname} is in a session right now, we'll close it too. It may take a few minutes to stop.",
+  "@sessionCloseNote": {
+    "description": "Privacy. In the withdraw-voice and delete sheets when the app can end live sessions (sessionList on).",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "sessionMayContinueNote": "If {nickname} is in a session right now, that session may go on until it ends.",
+  "@sessionMayContinueNote": {
+    "description": "Privacy. In the withdraw-voice and delete sheets when the app cannot see live sessions (sessionList off).",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "sessionCloseFailed": "We couldn't close {nickname}'s session. It may go on until it ends.",
+  "@sessionCloseFailed": {
+    "description": "Privacy. A live session could not be ended after a withdrawal or a deletion.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "withdrawVoiceConfirm": "Withdraw permission",
+  "@withdrawVoiceConfirm": {
+    "description": "Privacy."
+  },
+  "withdrawMemoryTitle": "Stop remembering?",
+  "@withdrawMemoryTitle": {
+    "description": "Privacy."
+  },
+  "withdrawMemoryBody": "Everything Aule remembers about {nickname} is deleted. This can't be undone.",
+  "@withdrawMemoryBody": {
+    "description": "Privacy.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "withdrawMemoryConfirm": "Stop remembering",
+  "@withdrawMemoryConfirm": {
+    "description": "Privacy."
+  },
+  "withdrawTranscriptsTitle": "Stop keeping conversations?",
+  "@withdrawTranscriptsTitle": {
+    "description": "Privacy."
+  },
+  "withdrawTranscriptsBody": "The written conversations of finished sessions are deleted. This can't be undone.",
+  "@withdrawTranscriptsBody": {
+    "description": "Privacy."
+  },
+  "withdrawTranscriptsConfirm": "Stop keeping them",
+  "@withdrawTranscriptsConfirm": {
+    "description": "Privacy."
+  },
+  "grantVoiceTitle": "Allow {nickname}'s voice",
+  "@grantVoiceTitle": {
+    "description": "Privacy.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "consentSaveFailed": "Couldn't save your choice. Try again.",
+  "@consentSaveFailed": {
+    "description": "Privacy."
+  },
+  "memoriesLink": "What Aule remembers",
+  "@memoriesLink": {
+    "description": "Privacy."
+  },
+  "memoriesTitle": "What Aule remembers about {nickname}",
+  "@memoriesTitle": {
+    "description": "Privacy.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "memoriesEmpty": "Aule doesn't remember anything about {nickname} yet.",
+  "@memoriesEmpty": {
+    "description": "Privacy.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "memoriesOff": "Remembering between sessions is off: Aule keeps no memories of {nickname}.",
+  "@memoriesOff": {
+    "description": "Privacy.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "memoriesLatest": "These are the {count} most recent memories.",
+  "@memoriesLatest": {
+    "description": "Privacy. Shown when the list reached the most the platform returns.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "memoryForget": "Forget",
+  "@memoryForget": {
+    "description": "Privacy."
+  },
+  "memoryForgotten": "Aule has forgotten it.",
+  "@memoryForgotten": {
+    "description": "Privacy."
+  },
+  "memoryForgetFailed": "Couldn't forget it. Try again.",
+  "@memoryForgetFailed": {
+    "description": "Privacy."
+  },
+  "deleteChildLink": "Delete {nickname}'s data",
+  "@deleteChildLink": {
+    "description": "Privacy.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteChildTitle": "Delete everything about {nickname}?",
+  "@deleteChildTitle": {
+    "description": "Privacy.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteChildBody": "Their profile, sessions, summaries, what Aule remembers and their notices are deleted. Their device is left unassigned. We keep only the record of your permissions, as proof. This can't be undone.",
+  "@deleteChildBody": {
+    "description": "Privacy."
+  },
+  "deleteChildConfirm": "Delete",
+  "@deleteChildConfirm": {
+    "description": "Privacy."
+  },
+  "deleteChildDone": "{nickname}'s data was deleted.",
+  "@deleteChildDone": {
+    "description": "Privacy.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "accountTitle": "Your account",
+  "@accountTitle": {
+    "description": "Privacy."
+  },
+  "accountLanguage": "Language",
+  "@accountLanguage": {
+    "description": "Privacy."
+  },
+  "accountLanguageHelp": "For the app, your emails and your notices.",
+  "@accountLanguageHelp": {
+    "description": "Privacy."
+  },
+  "accountEmailNotices": "Notices by email",
+  "@accountEmailNotices": {
+    "description": "Privacy."
+  },
+  "accountEmailNoticesHelp": "We email you when a session ends or something needs your attention. The email includes the notice's full text.",
+  "@accountEmailNoticesHelp": {
+    "description": "Privacy."
+  },
+  "emailNoticesOffTitle": "Turn off notices by email?",
+  "@emailNoticesOffTitle": {
+    "description": "Privacy. Asked before the email switch goes off."
+  },
+  "emailNoticesOffBody": "You'll also stop getting the notices that need your attention by email. You'll only see them when you open the app.",
+  "@emailNoticesOffBody": {
+    "description": "Privacy."
+  },
+  "emailNoticesOffConfirm": "Turn off the emails",
+  "@emailNoticesOffConfirm": {
+    "description": "Privacy."
+  },
+  "accountSignOut": "Sign out",
+  "@accountSignOut": {
+    "description": "Privacy."
+  },
+  "signOutTitle": "Sign out?",
+  "@signOutTitle": {
+    "description": "Privacy."
+  },
+  "signOutBody": "Everything stays saved. You can sign in again with your email.",
+  "@signOutBody": {
+    "description": "Privacy."
+  },
+  "signOutConfirm": "Sign out",
+  "@signOutConfirm": {
+    "description": "Privacy."
+  },
+  "accountDelete": "Delete my account",
+  "@accountDelete": {
+    "description": "Privacy."
+  },
+  "deleteAccountTitle": "Delete your account",
+  "@deleteAccountTitle": {
+    "description": "Privacy."
+  },
+  "deleteAccountBody": "Your family in Aule is deleted: your account, your children's profiles, their sessions, summaries, memories and notices. Your devices are unlinked. We keep only the record of your permissions, as proof.",
+  "@deleteAccountBody": {
+    "description": "Privacy."
+  },
+  "accountSessionCloseNote": "If one of your children is in a session right now, we'll close it too. It may take a few minutes to stop.",
+  "@accountSessionCloseNote": {
+    "description": "Privacy. Deleting the account, when the app can end live sessions (sessionList on)."
+  },
+  "accountSessionMayContinueNote": "If one of your children is in a session right now, that session may go on until it ends.",
+  "@accountSessionMayContinueNote": {
+    "description": "Privacy. Deleting the account, when the app cannot see live sessions (sessionList off)."
+  },
+  "deleteAccountLabel": "To confirm, type the email you signed in with",
+  "@deleteAccountLabel": {
+    "description": "Privacy."
+  },
+  "deleteAccountWrongEmail": "That's not the email you signed in with.",
+  "@deleteAccountWrongEmail": {
+    "description": "Privacy."
+  },
+  "deleteAccountConfirm": "Delete my account",
+  "@deleteAccountConfirm": {
+    "description": "Privacy."
+  },
+  "deleteAccountFinal": "This can't be undone.",
+  "@deleteAccountFinal": {
+    "description": "Privacy."
+  },
+  "deleteAccountDone": "Your account was deleted.",
+  "@deleteAccountDone": {
+    "description": "Privacy."
+  },
+  "deviceSectionTitle": "Devices",
+  "@deviceSectionTitle": {
+    "description": "Devices."
+  },
+  "deviceNone": "No Aule device is linked yet.",
+  "@deviceNone": {
+    "description": "Devices."
+  },
+  "deviceSetUp": "Set up a device",
+  "@deviceSetUp": {
+    "description": "Devices."
+  },
+  "deviceComingSoon": "Soon you'll be able to link your Aule device here.",
+  "@deviceComingSoon": {
+    "description": "Devices."
+  },
+  "deviceNameFor": "{nickname}'s Aule",
+  "@deviceNameFor": {
+    "description": "Devices.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "deviceNameUnassigned": "Unassigned Aule",
+  "@deviceNameUnassigned": {
+    "description": "Devices."
+  },
+  "deviceLastSeen": "Last online: {when}",
+  "@deviceLastSeen": {
+    "description": "Devices.",
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "deviceNeverSeen": "It hasn't connected yet",
+  "@deviceNeverSeen": {
+    "description": "Devices."
+  },
+  "setupTitle": "Set up your Aule",
+  "@setupTitle": {
+    "description": "Devices."
+  },
+  "setupHelp": "First we connect it to your Wi-Fi over Bluetooth. Then you link it to your family with a code.",
+  "@setupHelp": {
+    "description": "Devices."
+  },
+  "setupNeedWifi": "Have your Wi-Fi name and password at hand.",
+  "@setupNeedWifi": {
+    "description": "Devices."
+  },
+  "setupNeedPower": "Turn on your Aule and keep it near the phone.",
+  "@setupNeedPower": {
+    "description": "Devices."
+  },
+  "setupStart": "Start",
+  "@setupStart": {
+    "description": "Devices."
+  },
+  "setupHasWifi": "My Aule already has Wi-Fi",
+  "@setupHasWifi": {
+    "description": "Devices."
+  },
+  "setupBleSoon": "Soon you'll be able to connect your Aule to Wi-Fi from here. If it already has Wi-Fi, link it with its code.",
+  "@setupBleSoon": {
+    "description": "Devices."
+  },
+  "setupLinkWithCode": "Link with a code",
+  "@setupLinkWithCode": {
+    "description": "Devices."
+  },
+  "setupBtTitle": "Allow Bluetooth",
+  "@setupBtTitle": {
+    "description": "Devices."
+  },
+  "setupBtHelp": "Aule uses your phone's Bluetooth only to find your device and give it your Wi-Fi.",
+  "@setupBtHelp": {
+    "description": "Devices."
+  },
+  "setupBtHelpLocation": "Aule uses your phone's Bluetooth only to find your device and give it your Wi-Fi. On this phone, that permission shows up as location: we don't use your location for anything else.",
+  "@setupBtHelpLocation": {
+    "description": "Devices. The permissions step on Android 7 to 11, where the OS asks for location to scan for Bluetooth devices."
+  },
+  "setupBtAllow": "Allow Bluetooth",
+  "@setupBtAllow": {
+    "description": "Devices."
+  },
+  "setupBtDenied": "Without Bluetooth we can't find your Aule. You can allow it in your phone's settings.",
+  "@setupBtDenied": {
+    "description": "Devices."
+  },
+  "setupBtOff": "Turn on your phone's Bluetooth to continue.",
+  "@setupBtOff": {
+    "description": "Devices."
+  },
+  "setupLocationOff": "On this phone, finding Bluetooth devices needs location turned on. We don't use it for anything else.",
+  "@setupLocationOff": {
+    "description": "Devices."
+  },
+  "setupBtUnsupported": "This phone can't look for your Aule over Bluetooth. If it already has Wi-Fi, link it with its code.",
+  "@setupBtUnsupported": {
+    "description": "Devices. The permissions step when the phone has no usable Bluetooth Low Energy."
+  },
+  "setupScanTitle": "Looking for your Aule",
+  "@setupScanTitle": {
+    "description": "Devices."
+  },
+  "setupScanHelp": "Keep it on and close by. When it's ready, its light blinks blue slowly.",
+  "@setupScanHelp": {
+    "description": "Devices."
+  },
+  "setupScanHint": "If its light isn't blinking blue, turn it off and on again while holding its button.",
+  "@setupScanHint": {
+    "description": "Devices."
+  },
+  "setupPickTitle": "Choose your Aule",
+  "@setupPickTitle": {
+    "description": "Devices."
+  },
+  "setupDeviceName": "Aule {code}",
+  "@setupDeviceName": {
+    "description": "Devices.",
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "setupDeviceUnnamed": "An Aule near you",
+  "@setupDeviceUnnamed": {
+    "description": "Devices."
+  },
+  "setupNoneFound": "We didn't find any Aule",
+  "@setupNoneFound": {
+    "description": "Devices."
+  },
+  "setupNoneFoundHelp": "Bring it closer to the phone and check that its light is blinking blue.",
+  "@setupNoneFoundHelp": {
+    "description": "Devices."
+  },
+  "setupScanAgain": "Search again",
+  "@setupScanAgain": {
+    "description": "Devices."
+  },
+  "setupConnecting": "Connecting to your Aule",
+  "@setupConnecting": {
+    "description": "Devices."
+  },
+  "setupConnectingHelp": "We're setting up a secure connection. This can take a few seconds.",
+  "@setupConnectingHelp": {
+    "description": "Devices."
+  },
+  "setupConnectFailed": "We couldn't connect to your Aule. Bring it closer and try again.",
+  "@setupConnectFailed": {
+    "description": "Devices."
+  },
+  "setupWifiTitle": "Choose your Wi-Fi",
+  "@setupWifiTitle": {
+    "description": "Devices."
+  },
+  "setupWifiHelp": "Your Aule connects to 2.4 GHz networks.",
+  "@setupWifiHelp": {
+    "description": "Devices."
+  },
+  "setupWifiOther": "Another network",
+  "@setupWifiOther": {
+    "description": "Devices."
+  },
+  "setupWifiRefresh": "Search for networks again",
+  "@setupWifiRefresh": {
+    "description": "Devices."
+  },
+  "setupWifiNone": "Your Aule didn't find any networks. Type the name of yours.",
+  "@setupWifiNone": {
+    "description": "Devices."
+  },
+  "setupSsidLabel": "Network name",
+  "@setupSsidLabel": {
+    "description": "Devices."
+  },
+  "setupSsidTooLong": "That name is too long for a Wi-Fi network.",
+  "@setupSsidTooLong": {
+    "description": "Devices."
+  },
+  "setupPasswordTitle": "Type the password for {ssid}",
+  "@setupPasswordTitle": {
+    "description": "Devices.",
+    "placeholders": {
+      "ssid": {
+        "type": "String"
+      }
+    }
+  },
+  "setupPasswordLabel": "Wi-Fi password",
+  "@setupPasswordLabel": {
+    "description": "Devices."
+  },
+  "setupPasswordHelp": "The password goes encrypted straight to your Aule. We don't keep it. If your network has no password, leave it blank.",
+  "@setupPasswordHelp": {
+    "description": "Devices."
+  },
+  "setupPasswordShow": "Show",
+  "@setupPasswordShow": {
+    "description": "Devices."
+  },
+  "setupPasswordHide": "Hide",
+  "@setupPasswordHide": {
+    "description": "Devices."
+  },
+  "setupPasswordTooLong": "The password is too long: your Aule accepts up to 64 characters.",
+  "@setupPasswordTooLong": {
+    "description": "Devices."
+  },
+  "setupPasswordTooShort": "Wi-Fi passwords have at least 8 characters.",
+  "@setupPasswordTooShort": {
+    "description": "Devices."
+  },
+  "setupConnect": "Connect",
+  "@setupConnect": {
+    "description": "Devices."
+  },
+  "setupJoiningTitle": "Your Aule is connecting to {ssid}",
+  "@setupJoiningTitle": {
+    "description": "Devices.",
+    "placeholders": {
+      "ssid": {
+        "type": "String"
+      }
+    }
+  },
+  "setupJoiningHelp": "This can take up to 20 seconds.",
+  "@setupJoiningHelp": {
+    "description": "Devices."
+  },
+  "setupWifiFailedTitle": "Your Aule couldn't connect to {ssid}",
+  "@setupWifiFailedTitle": {
+    "description": "Devices.",
+    "placeholders": {
+      "ssid": {
+        "type": "String"
+      }
+    }
+  },
+  "setupWifiFailedHelp": "Check the password and that the network is 2.4 GHz.",
+  "@setupWifiFailedHelp": {
+    "description": "Devices."
+  },
+  "setupTryAgain": "Try again",
+  "@setupTryAgain": {
+    "description": "Devices."
+  },
+  "setupOtherNetwork": "Choose another network",
+  "@setupOtherNetwork": {
+    "description": "Devices."
+  },
+  "setupWifiDoneTitle": "Your Aule is on Wi-Fi",
+  "@setupWifiDoneTitle": {
+    "description": "Devices."
+  },
+  "setupWifiDoneHelp": "Now link it to your family.",
+  "@setupWifiDoneHelp": {
+    "description": "Devices."
+  },
+  "setupWifiProbablyTitle": "It looks like your Aule is connected",
+  "@setupWifiProbablyTitle": {
+    "description": "Devices."
+  },
+  "setupWifiProbablyHelp": "If its light turned green, go on to the code.",
+  "@setupWifiProbablyHelp": {
+    "description": "Devices."
+  },
+  "linkTitle": "Link your Aule",
+  "@linkTitle": {
+    "description": "Devices."
+  },
+  "linkHelp": "Type the 6-character code shown on your Aule. Each code works for 10 minutes.",
+  "@linkHelp": {
+    "description": "Devices."
+  },
+  "linkCodeLabel": "Device code",
+  "@linkCodeLabel": {
+    "description": "Devices."
+  },
+  "linkChildLabel": "Who will use it?",
+  "@linkChildLabel": {
+    "description": "Devices."
+  },
+  "linkChildLater": "Choose later",
+  "@linkChildLater": {
+    "description": "Devices."
+  },
+  "linkButton": "Link",
+  "@linkButton": {
+    "description": "Devices."
+  },
+  "linkWrong": "That code doesn't match or has expired. Type the one you see on your Aule now.",
+  "@linkWrong": {
+    "description": "Devices."
+  },
+  "linkTooMany": "You tried too many codes. Try again in an hour.",
+  "@linkTooMany": {
+    "description": "Devices."
+  },
+  "linkWaitingTitle": "Waiting for your Aule",
+  "@linkWaitingTitle": {
+    "description": "Devices."
+  },
+  "linkWaitingHelp": "Your Aule needs to confirm the link. Keep it on and connected to Wi-Fi.",
+  "@linkWaitingHelp": {
+    "description": "Devices."
+  },
+  "linkTimeoutTitle": "Your Aule didn't confirm the link",
+  "@linkTimeoutTitle": {
+    "description": "Devices."
+  },
+  "linkTimeoutHelp": "Check that it's still on and connected, and type the code again.",
+  "@linkTimeoutHelp": {
+    "description": "Devices."
+  },
+  "linkTypeAgain": "Type the code again",
+  "@linkTypeAgain": {
+    "description": "Devices."
+  },
+  "linkedTitle": "Your Aule is linked",
+  "@linkedTitle": {
+    "description": "Devices."
+  },
+  "linkedFor": "{nickname} can use it now.",
+  "@linkedFor": {
+    "description": "Devices.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "linkedChoose": "Choose who will use it.",
+  "@linkedChoose": {
+    "description": "Devices."
+  },
+  "deviceTitle": "Your Aule",
+  "@deviceTitle": {
+    "description": "Devices."
+  },
+  "deviceUsedByLabel": "Used by",
+  "@deviceUsedByLabel": {
+    "description": "Devices."
+  },
+  "deviceNobody": "Nobody for now",
+  "@deviceNobody": {
+    "description": "Devices."
+  },
+  "deviceSerialLabel": "Serial number",
+  "@deviceSerialLabel": {
+    "description": "Devices."
+  },
+  "deviceVersionLabel": "Version",
+  "@deviceVersionLabel": {
+    "description": "Devices."
+  },
+  "deviceLastSeenLabel": "Last online",
+  "@deviceLastSeenLabel": {
+    "description": "Devices."
+  },
+  "deviceUnlink": "Unlink this Aule",
+  "@deviceUnlink": {
+    "description": "Devices."
+  },
+  "deviceUnlinkTitle": "Unlink this Aule?",
+  "@deviceUnlinkTitle": {
+    "description": "Devices."
+  },
+  "deviceUnlinkBody": "It will leave your family. To use it again, you'll need to link it with a new code.",
+  "@deviceUnlinkBody": {
+    "description": "Devices."
+  },
+  "deviceUnlinkConfirm": "Unlink",
+  "@deviceUnlinkConfirm": {
+    "description": "Devices."
+  },
+  "deviceUnlinked": "Your Aule was unlinked.",
+  "@deviceUnlinked": {
+    "description": "Devices."
+  },
+  "liveBannerTitle": "{nickname} is in a session now",
+  "@liveBannerTitle": {
+    "description": "Live session.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "liveBannerListen": "Listen in",
+  "@liveBannerListen": {
+    "description": "Live session."
+  },
+  "liveBannerSoon": "Soon you'll be able to listen from here.",
+  "@liveBannerSoon": {
+    "description": "Live session."
+  },
+  "liveBannerDevice": "Sessions on the device can't be joined yet.",
+  "@liveBannerDevice": {
+    "description": "Live session."
+  },
+  "liveJoinTitle": "Listen to {nickname}'s session",
+  "@liveJoinTitle": {
+    "description": "Live session.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "liveJoinBody": "Aule will tell {nickname} out loud that you joined, and their screen will show it while you're there. Your microphone stays off.",
+  "@liveJoinBody": {
+    "description": "Live session.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "liveJoinConfirm": "Join and listen",
+  "@liveJoinConfirm": {
+    "description": "Live session."
+  },
+  "liveConnecting": "Connecting to the session",
+  "@liveConnecting": {
+    "description": "Live session."
+  },
+  "liveReconnecting": "The connection dropped. Reconnecting.",
+  "@liveReconnecting": {
+    "description": "Live session."
+  },
+  "liveListening": "You're listening",
+  "@liveListening": {
+    "description": "Live session."
+  },
+  "liveKnows": "{nickname} knows you're here.",
+  "@liveKnows": {
+    "description": "Live session.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "liveSpeakerChild": "{nickname} is talking",
+  "@liveSpeakerChild": {
+    "description": "Live session.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "liveSpeakerTutor": "Aule is talking",
+  "@liveSpeakerTutor": {
+    "description": "Live session."
+  },
+  "liveSpeakerMe": "You're talking",
+  "@liveSpeakerMe": {
+    "description": "Live session."
+  },
+  "liveSpeakerQuiet": "Quiet",
+  "@liveSpeakerQuiet": {
+    "description": "Live session."
+  },
+  "liveTimeLeft": "{minutes, plural, =0{Less than a minute left} =1{1 minute left} other{{minutes} minutes left}}",
+  "@liveTimeLeft": {
+    "description": "Live session.",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "liveOtherAdult": "Someone else from your family is also in the session.",
+  "@liveOtherAdult": {
+    "description": "Live session."
+  },
+  "liveStepIn": "Step in",
+  "@liveStepIn": {
+    "description": "Live session."
+  },
+  "liveStepInTitle": "Talk with {nickname}",
+  "@liveStepInTitle": {
+    "description": "Live session.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "liveStepInBody": "Aule will pause and tell {nickname} that you're going to talk. When you're done, hand the session back to Aule.",
+  "@liveStepInBody": {
+    "description": "Live session.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "liveStepInConfirm": "Turn on my microphone",
+  "@liveStepInConfirm": {
+    "description": "Live session."
+  },
+  "liveMicDenied": "To talk, allow the microphone in your phone's settings.",
+  "@liveMicDenied": {
+    "description": "Live session."
+  },
+  "liveStepInFailed": "We couldn't turn on your microphone in the session. You're still listening.",
+  "@liveStepInFailed": {
+    "description": "Live session."
+  },
+  "liveTalking": "You're talking with {nickname}",
+  "@liveTalking": {
+    "description": "Live session.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "liveMute": "Mute",
+  "@liveMute": {
+    "description": "Live session."
+  },
+  "liveUnmute": "Unmute",
+  "@liveUnmute": {
+    "description": "Live session."
+  },
+  "liveHandBack": "Hand back to Aule",
+  "@liveHandBack": {
+    "description": "Live session."
+  },
+  "liveHandBackFailed": "We couldn't tell Aule you're done talking. It may still be paused.",
+  "@liveHandBackFailed": {
+    "description": "Live session. Shown with a retry until listen mode is confirmed."
+  },
+  "liveLeave": "Leave",
+  "@liveLeave": {
+    "description": "Live session."
+  },
+  "liveLeaveNote": "If you leave the app, you'll stop listening.",
+  "@liveLeaveNote": {
+    "description": "Live session."
+  },
+  "liveLeft": "You stopped listening to the session.",
+  "@liveLeft": {
+    "description": "Live session."
+  },
+  "liveEnd": "End the session",
+  "@liveEnd": {
+    "description": "Live session."
+  },
+  "liveEndTitle": "End {nickname}'s session?",
+  "@liveEndTitle": {
+    "description": "Live session.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "liveEndBody": "The session closes for {nickname} and for Aule.",
+  "@liveEndBody": {
+    "description": "Live session.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "liveEndConfirm": "End it",
+  "@liveEndConfirm": {
+    "description": "Live session."
+  },
+  "liveEndKeep": "Keep listening",
+  "@liveEndKeep": {
+    "description": "Live session."
+  },
+  "liveEndedTitle": "The session ended",
+  "@liveEndedTitle": {
+    "description": "Live session."
+  },
+  "liveEndedHelp": "You'll see its summary in Progress in a few minutes.",
+  "@liveEndedHelp": {
+    "description": "Live session."
+  },
+  "liveBusy": "Someone else from your family is already listening to this session.",
+  "@liveBusy": {
+    "description": "Live session."
+  },
+  "liveNotActive": "This session is no longer active.",
+  "@liveNotActive": {
+    "description": "Live session."
+  },
+  "liveNoVoice": "{nickname} has no voice permission, so there's no session to listen to.",
+  "@liveNoVoice": {
+    "description": "Live session.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "liveReplaced": "You joined this session from another phone.",
+  "@liveReplaced": {
+    "description": "Live session."
+  },
+  "liveRemoved": "You're no longer in the session.",
+  "@liveRemoved": {
+    "description": "Live session."
+  },
+  "liveSoonTitle": "Listening to sessions is coming soon",
+  "@liveSoonTitle": {
+    "description": "Live session."
+  },
+  "liveSoonHelp": "When it's ready, you'll be able to listen to {nickname}'s session or step in from here.",
+  "@liveSoonHelp": {
+    "description": "Live session.",
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+/* Permission prompts in Spanish (Peru). */
+"NSBluetoothAlwaysUsageDescription" = "Aule usa el Bluetooth solo para encontrar tu aparato Aule y pasarle tu Wi-Fi.";
+"NSCameraUsageDescription" = "Aule no usa la cámara.";
+"NSLocalNetworkUsageDescription" = "Aule usa la red local solo para conectar el sonido de una sesión a la que decides entrar.";
+"NSMicrophoneUsageDescription" = "Aule usa el micrófono solo cuando decides hablar en una sesión.";
