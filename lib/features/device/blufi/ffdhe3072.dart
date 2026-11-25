@@ -1,0 +1,39 @@
+import 'dart:typed_data';
+
+/// The RFC 7919 ffdhe3072 group (Appendix A.2), a public constant:
+/// p = 2^3072 - 2^3008 + {[2^2942 * e] + 2625351} * 2^64 - 1, generator 2.
+///
+/// The firmware always computes in this group, whatever prime the phone
+/// sends (§8.2).
+abstract final class Ffdhe3072 {
+  /// The prime in bytes.
+  static const length = 384;
+
+  static const generator = 2;
+
+  /// The prime, big-endian, in hexadecimal.
+  static const hex =
+      'FFFFFFFFFFFFFFFFADF85458A2BB4A9AAFDC5620273D3CF1D8B9C583CE2D3695'
+      'A9E13641146433FBCC939DCE249B3EF97D2FE363630C75D8F681B202AEC4617A'
+      'D3DF1ED5D5FD65612433F51F5F066ED0856365553DED1AF3B557135E7F57C935'
+      '984F0C70E0E68B77E2A689DAF3EFE8721DF158A136ADE73530ACCA4F483A797A'
+      'BC0AB182B324FB61D108A94BB2C8E3FBB96ADAB760D7F4681D4F42A3DE394DF4'
+      'AE56EDE76372BB190B07A7C8EE0A6D709E02FCE1CDF7E2ECC03404CD28342F61'
+      '9172FE9CE98583FF8E4F1232EEF28183C3FE3B1B4C6FAD733BB5FCBC2EC22005'
+      'C58EF1837D1683B2C6F34A26C1B2EFFA886B4238611FCFDCDE355B3B6519035B'
+      'BC34F4DEF99C023861B46FC9D6E6C9077AD91D2691F7F7EE598CB0FAC186D91C'
+      'AEFE130985139270B4130C93BC437944F4FD4452E2D74DD364F2E21E71F54BFF'
+      '5CAE82AB9C9DF69EE86D2BC522363A0DABC521979B0DEADA1DBF9A42D5C4484E'
+      '0ABCD06BFA53DDEF3C1B20EE3FD59D7C25E41D2B66C62E37FFFFFFFFFFFFFFFF';
+
+  static final BigInt prime = BigInt.parse(hex, radix: 16);
+
+  /// The prime as [length] big-endian bytes. A fresh copy each time.
+  static Uint8List primeBytes() {
+    final bytes = Uint8List(length);
+    for (var i = 0; i < length; i++) {
+      bytes[i] = int.parse(hex.substring(i * 2, i * 2 + 2), radix: 16);
+    }
+    return bytes;
+  }
+}

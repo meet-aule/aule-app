@@ -1,0 +1,46 @@
+name: aule
+description: "Aule for families: set up the device, follow progress, join a session, control privacy."
+publish_to: none
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.0        # material_ui 1.11 needs Dart 3.13 / Flutter 3.47
+  flutter: ">=3.47.0" # the local 3.47.7 and stable 3.50.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  material_ui: ^1.11.1            # flutter.dev, BSD-3; Material now lives here
+  intl: ^0.20.3                   # dart.dev, BSD-3; what flutter_localizations pins
+  go_router: ^18.1.4              # flutter.dev, BSD-3
+  provider: ^6.1.5+1              # MIT
+  http: ^1.6.0                    # dart.dev, BSD-3
+  flutter_secure_storage: ^11.2.0 # BSD-3; the guardian token only
+  shared_preferences: ^2.5.6      # flutter.dev, BSD-3; first-run flag and UI language only
+  url_launcher: ^6.3.3            # flutter.dev, BSD-3; privacy policy and mailto
+  google_sign_in: ^7.2.0          # flutter.dev, BSD-3; behind googleSignIn
+  livekit_client: ^2.14.0         # livekit.io, Apache-2.0; behind liveJoin
+  wakelock_plus: ^1.8.2           # fluttercommunity.dev, BSD-3; live screen only
+  universal_ble: ^3.4.1           # navideck.com, BSD-3; behind bleWifi
+  permission_handler: ^13.0.2     # MIT
+  device_info_plus: ^13.3.0       # fluttercommunity.dev, BSD-3; Android SDK level
+  crypto: ^3.0.8                  # dart.dev, BSD-3; SHA-256
+  cryptography: ^2.9.0            # Apache-2.0; AES-256-CTR
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  generate: true
+  uses-material-design: true
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Variable.ttf
+    - family: Source Serif 4
+      fonts:
+        - asset: assets/fonts/SourceSerif4-Variable.ttf
