@@ -82,6 +82,10 @@ class _SignInScreenState extends State<SignInScreen> {
         ),
       ],
       footer: <Widget>[
+        LinkButton(
+          label: l10n.resourcesTitle,
+          onPressed: () => context.push(Routes.resources),
+        ),
         Text(l10n.signInPrivacyNote, style: theme.textTheme.bodySmall),
         Align(
           alignment: AlignmentDirectional.centerStart,

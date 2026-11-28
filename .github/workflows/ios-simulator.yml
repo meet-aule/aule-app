@@ -1,0 +1,60 @@
+name: iOS Simulator
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-simulator-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ios-demo:
+    name: Build and launch the iOS simulator demo
+    runs-on: xcode-27
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: app
+    env:
+      FLUTTER_SUPPRESS_ANALYTICS: 'true'
+    steps:
+      - name: Check out Aule
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: app
+          persist-credentials: false
+      - name: Check out Flutter
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: flutter/flutter
+          ref: refs/tags/3.47.7
+          path: flutter
+          persist-credentials: false
+      - name: Verify the Flutter SDK
+        run: |
+          test "$(git -C ../flutter rev-parse HEAD)" = abaf9c523780a608bd46686fd5e53740a07077f8
+          echo "$GITHUB_WORKSPACE/flutter/bin" >> "$GITHUB_PATH"
+      - name: Install locked packages
+        run: flutter pub get --enforce-lockfile
+      - name: Build the demo for the simulator
+        run: flutter build ios --debug --simulator --no-codesign --no-pub --dart-define=AULE_DEMO=true
+      - name: Install and launch on an available iPhone
+        run: |
+          device=$(xcrun simctl list devices available --json | jq -er '
+            [.devices | to_entries[] | select(.key | contains(".iOS-")) | .value[]
+              | select(.name | startswith("iPhone"))][0].udid // empty')
+          xcrun simctl bootstatus "$device" -b
+          bundle=build/ios/iphonesimulator/Runner.app
+          identifier=$(/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' "$bundle/Info.plist")
+          xcrun simctl install "$device" "$bundle"
+          launched=$(xcrun simctl launch "$device" "$identifier")
+          pid=${launched##*: }
+          sleep 8
+          xcrun simctl spawn "$device" launchctl list | awk -v pid="$pid" -v id="$identifier" '
+            $1 == pid && index($3, id) { found=1 } END { exit !found }'

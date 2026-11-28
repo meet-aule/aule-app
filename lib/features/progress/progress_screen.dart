@@ -123,6 +123,10 @@ class _ProgressScreenState extends State<ProgressScreen> {
                 progress: store.progressOf(child.id),
               ),
             ),
+        LinkButton(
+          label: l10n.resourcesTitle,
+          onPressed: () => context.push(Routes.resources),
+        ),
         AuleCard(
           onTap: () => context.go(Routes.notices),
           child: Column(

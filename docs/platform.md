@@ -6,13 +6,13 @@
 flutter create --no-pub --org com.meetaule --project-name aule --platforms android,ios .
 ```
 
-That command only writes template files; it fetches no package and builds nothing. Nothing in either folder has been built yet. What was changed in the templates, and why, is below. To refresh them after a Flutter upgrade, run the same command (it keeps files that exist) and delete `test/widget_test.dart` if it appears.
+That command only writes template files; it fetches no package and builds nothing. What was changed in the templates, and why, is below. To refresh them after a Flutter upgrade, run the same command (it keeps files that exist) and delete `test/widget_test.dart` if it appears.
 
 The first `flutter pub get` also writes `lib/core/l10n/app_localizations*.dart`, which `.gitignore` keeps out of the repository.
 
 ## 1. Android
 
-The template's SDK levels stay: `minSdk` 24 (the floor of flutter_secure_storage 11), `targetSdk` and `compileSdk` 36. CI needs Android SDK Platform 37 installed, because permission_handler_android compiles against 37.
+The app has `minSdk` 24 and `targetSdk` 36. Its `compileSdk` is 37 for permission_handler_android. Install `platforms;android-37.0`. Android Gradle Plugin 9.1.1 recognizes that SDK.
 
 `android/app/src/main/AndroidManifest.xml` adds to the template:
 
@@ -73,6 +73,11 @@ When `AULE_GOOGLE_SERVER_CLIENT_ID` is empty, the app asks the platform for it (
 
 ## 5. Builds
 
+The Flutter workflow checks the locked packages, analyzes Dart, runs the tests
+and builds an ARM64 Android APK with the synthetic demo family. Download
+`aule-family-demo-arm64-debug` from the workflow run artifacts for seven days.
+The APK uses debug signing. Store distribution needs a separate signing setup.
+
 Every setting is a `--dart-define`. No default points at production: with no API base the app runs in demo mode.
 
 ```sh
@@ -86,7 +91,7 @@ flutter run --dart-define=AULE_DEMO=true
 flutter run \
   --dart-define=AULE_API_BASE=http://10.0.2.2:8091/v1
 
-# Production, once gap 1 gives the app a public path. Turn a flag on only
+# Production, once encryption to the origin is verified (gap 1). Turn a flag on only
 # when its server work is live (README, "Server gaps").
 flutter build appbundle \
   --dart-define=AULE_API_BASE=https://playground.meetaule.com/session/api/v1 \
@@ -101,6 +106,7 @@ flutter build appbundle \
 | Define | Meaning | Default |
 |---|---|---|
 | `AULE_API_BASE` | The platform, ending in `/v1` | empty, which means demo mode |
+| `AULE_PLAYGROUND_URL` | Optional HTTPS base of the browser tutor for opening a published activity | derived from an API base ending in `/api/v1`; demo mode uses bundled guides only |
 | `AULE_DEMO` | Force demo mode | `false` |
 | `AULE_FF_SESSIONS` | Session facts, live detection, and ending a live session after a withdrawal or a deletion (gap 3) | `false` |
 | `AULE_FF_LIVE` | Listening in and stepping in (gaps 4a, 4b and 5) | `false` |
@@ -112,6 +118,10 @@ flutter build appbundle \
 | `AULE_PRIVACY_URL` | The privacy policy in Spanish | `https://meetaule.com/legal/privacy` |
 | `AULE_PRIVACY_URL_EN` | The privacy policy in English | `https://meetaule.com/en/legal/privacy` |
 | `AULE_VERSION` | The version shown in Privacy | `0.1.0` |
+
+To refresh the bundled Apache-2.0 lessons, run
+`node tool/sync_teaching_resources.mjs /path/to/aule-sw` from the app root.
+The source is `apps/playground/public/teaching-resources.js` in Aule Server.
 
 ## 6. Fonts
 

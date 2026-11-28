@@ -9,12 +9,13 @@ import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 
 const base = 'https://example.com/session/api/v1';
+const testToken = 'synthetic-guardian-token';
 
 /// A transport over [handler], counting 401 callbacks.
 class Harness {
   Harness(
     Future<http.Response> Function(http.Request request) handler, {
-    String? token = 'a' * 64,
+    String? token = testToken,
     Duration timeout = const Duration(seconds: 5),
   }) {
     transport = HttpApiTransport(
@@ -40,9 +41,10 @@ http.Response jsonResponse(Object body, int status) => http.Response.bytes(
   headers: <String, String>{'content-type': 'application/json'},
 );
 
-Matcher apiError(ApiErrorKind kind, {int? status}) => isA<ApiException>()
-    .having((error) => error.kind, 'kind', kind)
-    .having((error) => error.status, 'status', status);
+TypeMatcher<ApiException> apiError(ApiErrorKind kind, {int? status}) =>
+    isA<ApiException>()
+        .having((error) => error.kind, 'kind', kind)
+        .having((error) => error.status, 'status', status);
 
 void main() {
   group('requests', () {
@@ -56,7 +58,7 @@ void main() {
         expect(request.method, 'GET');
         expect(request.url.toString(), '$base/me');
         expect(request.headers['Accept'], 'application/json');
-        expect(request.headers['Authorization'], 'Bearer ${'a' * 64}');
+        expect(request.headers['Authorization'], 'Bearer $testToken');
         expect(request.headers.containsKey('Content-Type'), isFalse);
         // Nothing else: no device ids, no tracking headers.
         expect(

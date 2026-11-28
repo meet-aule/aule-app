@@ -96,6 +96,7 @@ Future<void> pumpScreen(
   Widget child, {
   List<SingleChildWidget> providers = const <SingleChildWidget>[],
   Locale locale = const Locale('es'),
+  bool settle = true,
 }) async {
   await tester.pumpWidget(
     MultiProvider(
@@ -112,7 +113,11 @@ Future<void> pumpScreen(
       ),
     ),
   );
-  await tester.pumpAndSettle();
+  if (settle) {
+    await tester.pumpAndSettle();
+  } else {
+    await tester.pump();
+  }
 }
 
 /// A phone-shaped window tall enough that long screens build every row:

@@ -6,7 +6,8 @@ plugins {
 
 android {
     namespace = "com.meetaule.aule"
-    compileSdk = flutter.compileSdkVersion
+    // permission_handler_android compiles against Android 17.
+    compileSdk = 37
     ndkVersion = flutter.ndkVersion
 
     compileOptions {

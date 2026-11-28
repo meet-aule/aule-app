@@ -16,6 +16,7 @@ El aparato es para el niño. La app es para la familia. Nunca se convierte en un
 
 ## Qué hace
 
+- **Actividades abiertas.** Desde el inicio de sesión o la pestaña de progreso, lee sin conexión tres fichas de fracciones de quinto de primaria en español e inglés. Incluyen un plan, una rúbrica y un ejercicio de salida con clave para el adulto. Con el tutor web configurado, puedes abrir el ejercicio en el tutor o imprimir la ficha desde el navegador.
 - **Configurar el aparato.** Conectar Aule al Wi-Fi por Bluetooth y vincularlo a la familia.
 - **Seguir el avance.** Qué practicó el niño, qué ya domina y qué le toca, en lenguaje simple.
 - **Entrar a una sesión.** Escuchar, o intervenir como tutor humano, en la misma sala de LiveKit que usa el aparato.
@@ -25,10 +26,10 @@ El aparato es para el niño. La app es para la familia. Nunca se convierte en un
 
 v0, en desarrollo en la rama `feat/app-v0`. Escrita desde cero con Flutter para Android e iOS.
 
-- **Funciona con la plataforma de hoy** (cuando tenga una ruta pública, brecha 1 más abajo): entrar con un código por correo, la autorización del padre o la madre antes de cualquier dato del niño, agregar y editar niños, el avance con resúmenes y habilidades, los avisos y todos los controles de privacidad (autorizaciones, lo que Aule recuerda, borrar los datos de un niño o la cuenta entera).
+- **Disponible con una plataforma configurada** (ver el requisito de cifrado en el punto 1): entrar con un código por correo, la autorización del padre o la madre antes de cualquier dato del niño, agregar y editar niños, el avance con resúmenes y habilidades, los avisos y todos los controles de privacidad (autorizaciones, lo que Aule recuerda, borrar los datos de un niño o la cuenta entera).
 - **Detrás de banderas hasta que el servidor o el firmware estén listos:** los datos de cada sesión y las sesiones en curso, escuchar e intervenir, enlazar un aparato, el Wi-Fi por Bluetooth y entrar con Google (solo en Android).
 - **Funciona de punta a punta en modo de demostración**, con todas las banderas prendidas menos Google, datos inventados y sin pedir Bluetooth, ubicación ni micrófono.
-- **Todavía no se ha compilado.** No hay ningún binario, no se ha corrido el analizador ni ninguna prueba. Las carpetas `android/` e `ios/` son las plantillas de Flutter 3.47.7 con los permisos, las reglas de copias de seguridad y los textos de los permisos ya incluidos: ver [docs/platform.md](docs/platform.md) (en inglés).
+- **Compilación y pruebas.** Con `flutter test` se comprueban los flujos de familias y las fichas sin conexión. La demo de iOS también compila para simulador. La configuración de cada plataforma está en [docs/platform.md](docs/platform.md) (en inglés).
 
 ## Probarla en modo de demostración
 
@@ -100,7 +101,7 @@ La app ya está lista para estos cambios. Hasta que llegue cada uno, su bandera 
 
 | # | Falta | Qué hace la app mientras tanto |
 |---|---|---|
-| 1 | **No hay una API pública.** La plataforma solo escucha en su propia máquina, y la ruta de la web usa cookies. El cambio más pequeño es un paso directo, solo con token, bajo `playground.meetaule.com/session/api/v1`. | Modo de demostración, o una plataforma local. |
+| 1 | **Cifrado hasta el servidor.** La API móvil ya está disponible en `playground.meetaule.com/session/api/v1`. Antes de usar cuentas de familias, hay que verificar el cifrado entre Cloudflare y el servidor. | Modo de demostración, o una plataforma local. |
 | 2 | **El token no se renueva.** Las sesiones duran 30 días fijos. | La familia vuelve a entrar con un código nuevo. |
 | 3 | **No hay una lista de las sesiones de un niño** (`GET /v1/children/{id}/sessions`). | La lista se arma con los resúmenes y no se detectan sesiones en curso. Bandera `sessionList`. |
 | 4a | **Los apoderados no pueden entrar a una sesión en curso**: faltan las rutas para entrar y cambiar de modo, y la sala admite dos. | Bandera `liveJoin`. |

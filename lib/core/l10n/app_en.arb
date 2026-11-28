@@ -1,5 +1,27 @@
 {
   "@@locale": "en",
+  "resourcesTitle": "Fraction activities",
+  "@resourcesTitle": {"description": "Fraction activities"},
+  "resourcesIntro": "Three fifth-grade activities with guidance for families and teachers.",
+  "@resourcesIntro": {"description": "Three fifth-grade activities with guidance for families and teachers."},
+  "resourcesExercise": "Learner’s exercise",
+  "@resourcesExercise": {"description": "Learner’s exercise"},
+  "resourcesPractise": "Practise with Aule in the browser",
+  "@resourcesPractise": {"description": "Practise with Aule in the browser"},
+  "resourcesPlan": "How to guide practice",
+  "@resourcesPlan": {"description": "How to guide practice"},
+  "resourcesExample": "Worked example",
+  "@resourcesExample": {"description": "Worked example"},
+  "resourcesRubric": "What to look for",
+  "@resourcesRubric": {"description": "What to look for"},
+  "resourcesExit": "Try it independently",
+  "@resourcesExit": {"description": "Try it independently"},
+  "resourcesKey": "Adult answer key",
+  "@resourcesKey": {"description": "Adult answer key"},
+  "resourcesPrint": "Open the guide to print or download",
+  "@resourcesPrint": {"description": "Open the guide to print or download"},
+  "resourcesLicense": "Original material by Aule · Apache 2.0 licence",
+  "@resourcesLicense": {"description": "Original material by Aule · Apache 2.0 licence"},
   "appTitle": "Aule",
   "@appTitle": {
     "description": "Shared strings."
@@ -932,6 +954,14 @@
   "childProgressNext": "Up next",
   "@childProgressNext": {
     "description": "Progress."
+  },
+  "childProgressRevisit": "Suggested review",
+  "@childProgressRevisit": {
+    "description": "Topics with recorded practice that the tutor suggests revisiting."
+  },
+  "childProgressOngoing": "Skills in practice",
+  "@childProgressOngoing": {
+    "description": "Practised skills the tutor suggests continuing."
   },
   "childProgressSessions": "Latest sessions",
   "@childProgressSessions": {

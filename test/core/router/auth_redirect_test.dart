@@ -28,13 +28,14 @@ void main() {
   });
 
   group('signed out', () {
-    test('only the sign-in screens are open', () {
+    test('only sign-in screens and the public resources are open', () {
       for (final location in <String>[
         Routes.signIn,
         Routes.signInEmail,
         Routes.signInCode,
         Routes.signInName,
         Routes.signInHelp,
+        Routes.resources,
       ]) {
         expect(
           redirect(AuthState.signedOut, location),

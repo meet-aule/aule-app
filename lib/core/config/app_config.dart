@@ -37,6 +37,7 @@ class AppConfig {
     required this.privacyPolicyUrlEn,
     required this.supportEmail,
     required this.version,
+    this.playgroundUrl = '',
   });
 
   factory AppConfig.fromEnvironment() {
@@ -44,6 +45,7 @@ class AppConfig {
     const demo = bool.fromEnvironment('AULE_DEMO') || base == '';
     return AppConfig(
       apiBaseUrl: demo ? '' : base,
+      playgroundUrl: const String.fromEnvironment('AULE_PLAYGROUND_URL'),
       demo: demo,
       flags: demo
           ? const FeatureFlags(
@@ -99,6 +101,35 @@ class AppConfig {
   final String privacyPolicyUrlEn;
   final String supportEmail;
   final String version;
+  final String playgroundUrl;
+
+  /// Public worksheet URLs carry only a catalog ID and a language. A direct
+  /// platform installation can supply its browser playground separately.
+  Uri? resourceLink(String id, String language, {required bool practice}) {
+    if (demo || !RegExp(r'^[a-z0-9-]+$').hasMatch(id)) return null;
+    final explicit = playgroundUrl.isNotEmpty;
+    final uri = Uri.tryParse(explicit ? playgroundUrl : apiBaseUrl);
+    if (uri == null ||
+        uri.scheme != 'https' ||
+        uri.host.isEmpty ||
+        uri.userInfo.isNotEmpty ||
+        uri.hasQuery ||
+        uri.hasFragment) {
+      return null;
+    }
+    var base = uri.path.replaceFirst(RegExp(r'/+$'), '');
+    if (!explicit) {
+      if (!base.endsWith('/api/v1')) return null;
+      base = base.substring(0, base.length - '/api/v1'.length);
+    }
+    return uri.replace(
+      path: practice ? '$base/' : '$base/resources',
+      queryParameters: {
+        (practice ? 'practice' : 'activity'): id,
+        'lang': language == 'en' ? 'en' : 'es',
+      },
+    );
+  }
 
   /// The policy in the UI language: 'en' or anything else (Spanish).
   String privacyPolicyFor(String language) =>
