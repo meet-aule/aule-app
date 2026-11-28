@@ -47,6 +47,8 @@ app.*.map.json
 # Local secrets and signing material never enter the repository.
 *.jks
 *.keystore
+*.p12
+*.pfx
 key.properties
 local.properties
 **/GoogleService-Info.plist

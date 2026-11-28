@@ -1,12 +1,22 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+val uploadPropertiesFile = rootProject.file("key.properties")
+val uploadProperties = Properties().apply {
+    if (uploadPropertiesFile.isFile) uploadPropertiesFile.inputStream().use { load(it) }
+}
+val missingUploadFields = listOf("storeFile", "storePassword", "keyAlias", "keyPassword")
+    .filter { uploadProperties.getProperty(it).isNullOrBlank() }
+
 android {
     namespace = "com.meetaule.aule"
-    compileSdk = flutter.compileSdkVersion
+    // permission_handler_android compiles against Android 17.
+    compileSdk = 37
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -29,11 +39,22 @@ android {
         versionName = flutter.versionName
     }
 
-    buildTypes {
-        release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+    if (uploadPropertiesFile.isFile && missingUploadFields.isEmpty()) {
+        signingConfigs.create("upload") {
+            storeFile = rootProject.file(uploadProperties.getProperty("storeFile"))
+            storePassword = uploadProperties.getProperty("storePassword")
+            keyAlias = uploadProperties.getProperty("keyAlias")
+            keyPassword = uploadProperties.getProperty("keyPassword")
+        }
+    }
+    buildTypes.getByName("release").signingConfig = signingConfigs.findByName("upload")
+}
+
+// An incomplete local signing setup should fail a release without blocking debug builds.
+if (uploadPropertiesFile.isFile && missingUploadFields.isNotEmpty()) {
+    tasks.matching { it.name == "preReleaseBuild" }.configureEach {
+        doFirst {
+            throw GradleException("Incomplete Android upload signing settings: ${missingUploadFields.joinToString()}")
         }
     }
 }

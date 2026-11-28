@@ -35,9 +35,7 @@ Future<void> until(
 
 /// The two session calls the live screen makes; nothing else is used.
 class _SessionApi implements AuleApi {
-  _SessionApi({this.remainingSeconds = 600});
-
-  int remainingSeconds;
+  int remainingSeconds = 600;
   String status = 'active';
   int ends = 0;
   Object? endError;

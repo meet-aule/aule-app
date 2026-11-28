@@ -16,6 +16,7 @@ The device is for the child. The app is for the family. It never becomes a secon
 
 ## What it does
 
+- **Open teaching resources.** From sign-in or Progress, read three bilingual fifth-grade fraction guides offline. Each includes an exercise, lesson plan, observation rubric and exit question with an adult answer key. With a connected playground, the adult can open the exercise in the tutor or print the guide in a browser.
 - **Set up the device.** Connect Aule to Wi-Fi over Bluetooth and link it to the family.
 - **Follow progress.** What the child practiced, what they now master and what comes next, in plain language.
 - **Join a session.** Listen in, or step in as a human tutor, through the same LiveKit room the device uses.
@@ -25,10 +26,10 @@ The device is for the child. The app is for the family. It never becomes a secon
 
 v0, in development on the `feat/app-v0` branch. Written from scratch with Flutter for Android and iOS.
 
-- **Works against the platform today** (once it has a public path, gap 1 below): sign-in with an emailed code, the parent's consent before anything about the child, adding and editing children, progress from reviews and skills, notices, and every privacy control (consents, what Aule remembers, deleting a child's data or the whole account).
+- **Available with a configured platform** (see the transport requirement in gap 1): sign-in with an emailed code, the parent's consent before anything about the child, adding and editing children, progress from reviews and skills, notices, and every privacy control (consents, what Aule remembers, deleting a child's data or the whole account).
 - **Behind flags until the server or firmware catches up:** session facts and live sessions, listening in and stepping in, linking a device, Wi-Fi over Bluetooth, and Google sign-in (Android only).
 - **Runs end to end in demo mode**, with every flag but Google on, invented data, and no Bluetooth, location or microphone prompt.
-- **Not built yet.** No binary has been compiled, the analyzer has not run and no test has run. `android/` and `ios/` are the Flutter 3.47.7 templates with the permissions, backup rules and prompts merged in: see [docs/platform.md](docs/platform.md).
+- **Mobile builds and tests.** Run `flutter test` to check the family flows and the offline resources. The iOS demo also builds for the simulator. Platform settings and release configuration are in [docs/platform.md](docs/platform.md).
 
 ## Run it in demo mode
 
@@ -100,7 +101,7 @@ The app is ready for these. Until each one ships, its flag stays off outside dem
 
 | # | Gap | What the app does meanwhile |
 |---|---|---|
-| 1 | **No public API.** The platform listens only on its own machine; the web's path is cookie-based. A bearer-only pass-through under `playground.meetaule.com/session/api/v1` is the smallest change. | Demo mode, or a local platform. |
+| 1 | **Transport to the origin.** The bearer API is available under `playground.meetaule.com/session/api/v1`. Before using family accounts, verify encryption from the edge to the origin. | Demo mode, or a local platform. |
 | 2 | **No token renewal.** Sessions last a fixed 30 days. | The parent signs in again with a new code. |
 | 3 | **No list of a child's sessions** (`GET /v1/children/{id}/sessions`). | The session list is built from reviews; no live session is found. Flag `sessionList`. |
 | 4a | **Guardians cannot join a live session**: no join and mode routes, and the room holds two. | Flag `liveJoin`. |

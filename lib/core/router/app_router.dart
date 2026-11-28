@@ -25,6 +25,7 @@ import '../../features/progress/notice_screen.dart';
 import '../../features/progress/notices_screen.dart';
 import '../../features/progress/progress_screen.dart';
 import '../../features/progress/session_detail_screen.dart';
+import '../../features/resources/resources_screen.dart';
 import '../auth/auth_controller.dart';
 import '../l10n/l10n.dart';
 import '../widgets/aule_page.dart';
@@ -40,6 +41,7 @@ String? authRedirect({
   required bool hasConsentDraft,
   required String location, // GoRouterState.matchedLocation, no query
 }) {
+  if (location == Routes.resources) return null;
   final inSignIn =
       location == Routes.signIn || location.startsWith('${Routes.signIn}/');
   switch (state) {
@@ -77,6 +79,10 @@ GoRouter buildAppRouter({
     ),
     errorBuilder: (context, state) => const NotFoundScreen(),
     routes: <RouteBase>[
+      GoRoute(
+        path: Routes.resources,
+        builder: (context, state) => const ResourcesScreen(),
+      ),
       GoRoute(
         path: Routes.loading,
         builder: (context, state) => const LoadingScreen(),

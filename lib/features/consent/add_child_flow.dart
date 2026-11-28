@@ -199,13 +199,14 @@ class AddChildFlow extends AddChildFlowSurface {
         'kind': error.kind,
       });
       _unsure = known;
+      ChildRef? found;
       try {
-        final found = await _appearedSince(known);
+        found = await _appearedSince(known);
         _unsure = null;
-        if (found != null) return _adopt(found, draft);
       } on Exception {
         // Still unsure: the next attempt looks first.
       }
+      if (found != null) return _adopt(found, draft);
       rethrow;
     }
   }

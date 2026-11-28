@@ -11,6 +11,7 @@ abstract final class Routes {
   static String addChildDone(String childId) =>
       '/add-child/done?child=$childId';
   static const progress = '/progress';
+  static const resources = '/resources';
   static const notices = '/progress/notices';
   static String notice(String noticeId) => '/progress/notices/$noticeId';
   static String childProgress(String childId) => '/progress/child/$childId';

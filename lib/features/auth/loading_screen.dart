@@ -1,8 +1,10 @@
+import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:provider/provider.dart';
 
 import '../../core/auth/auth_controller.dart';
 import '../../core/l10n/l10n.dart';
+import '../../core/router/routes.dart';
 import '../../core/theme/aule_colors.dart';
 import '../../core/theme/aule_text.dart';
 import '../../core/widgets/buttons.dart';
@@ -50,6 +52,10 @@ class LoadingScreen extends StatelessWidget {
                   SmallButton(
                     label: l10n.commonRetry,
                     onPressed: () => auth.restore(),
+                  ),
+                  LinkButton(
+                    label: l10n.resourcesTitle,
+                    onPressed: () => context.push(Routes.resources),
                   ),
                 ],
               ],

@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:aule/core/api/fake/demo_data.dart';
-import 'package:aule/features/device/data/device_models.dart';
 import 'package:aule/features/device/data/fake_device_api.dart';
 import 'package:aule/features/device/provisioning/ble_permissions.dart';
 import 'package:aule/features/device/provisioning/fake_wifi_provisioner.dart';

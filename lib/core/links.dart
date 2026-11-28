@@ -21,6 +21,10 @@ Future<void> openSupportMail(BuildContext context) {
   return _open(context, Uri(scheme: 'mailto', path: config.supportEmail));
 }
 
+/// Opens a catalog activity on this installation in the system browser.
+Future<void> openResourceLink(BuildContext context, Uri uri) =>
+    _open(context, uri);
+
 Future<void> _open(BuildContext context, Uri uri) async {
   final messenger = ScaffoldMessenger.maybeOf(context);
   final failed = context.l10n.errorGeneric;

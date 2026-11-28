@@ -93,6 +93,13 @@ class NextSkill {
   final double? targetDifficulty;
 }
 
+typedef SuggestedSkill = ({String skillId, String name, String? reason});
+typedef PracticeSuggestions = ({
+  List<SuggestedSkill> revisit,
+  List<SuggestedSkill> ongoing,
+  List<SuggestedSkill> other,
+});
+
 class SkillReport {
   const SkillReport({
     required this.ability,
@@ -115,6 +122,39 @@ class SkillReport {
       skills.where((skill) => skill.attempts > 0);
   int get masteredCount => worked.where((skill) => skill.mastered).length;
   int get practisingCount => worked.where((skill) => !skill.mastered).length;
+
+  /// Match practice advice to this child's attempts. An older response can
+  /// still suggest a named topic without establishing that it was practised.
+  PracticeSuggestions suggestions(String? Function(String) catalogName) {
+    final attempted = {
+      for (final skill in worked)
+        if (skill.skillId.isNotEmpty) skill.skillId,
+    };
+    final revisit = <SuggestedSkill>[];
+    final ongoing = <SuggestedSkill>[];
+    final other = <SuggestedSkill>[];
+    for (final skill in next) {
+      final supplied = skill.name?.trim();
+      final name = supplied == null || supplied.isEmpty
+          ? catalogName(skill.skillId)?.trim()
+          : supplied;
+      if (name == null || name.isEmpty) continue;
+      final group = switch ((skill.reason, attempted.contains(skill.skillId))) {
+        ('review_due', true) => revisit,
+        ('in_progress', true) => ongoing,
+        _ => other,
+      };
+      if (group.length >= 3) continue;
+      group.add((
+        skillId: skill.skillId,
+        name: name,
+        reason: skill.reason == 'ready' || skill.reason == 'asked'
+            ? skill.reason
+            : null,
+      ));
+    }
+    return (revisit: revisit, ongoing: ongoing, other: other);
+  }
 }
 
 class SkillInfo {

@@ -26,7 +26,8 @@ void main() {
     await tester.tap(find.byType(PrimaryButton));
     expect(presses, 1);
 
-    await pumpScreen(tester, page(enabled: true, busy: true));
+    // The loading indicator animates indefinitely; one frame renders the busy state.
+    await pumpScreen(tester, page(enabled: true, busy: true), settle: false);
     // The spinner replaces the label, which screen readers still hear.
     expect(find.text('Continuar'), findsNothing);
     expect(find.bySemanticsLabel('Continuar'), findsOneWidget);

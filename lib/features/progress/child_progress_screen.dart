@@ -28,7 +28,6 @@ class ChildProgressScreen extends StatefulWidget {
   final String childId;
 
   static const maxSkillNames = 5;
-  static const maxNext = 3;
   static const maxNotices = 5;
 
   @override
@@ -61,6 +60,7 @@ class _ChildProgressScreenState extends State<ChildProgressScreen> {
     final grade = detail?.child.grade;
     final progress = store.progressOf(widget.childId);
     final skills = progress.skills;
+    final suggestions = skills?.suggestions(store.skillName);
     final entries = sessionEntries(progress, withFacts: flags.sessionList);
     final notices = store
         .noticesFor(widget.childId)
@@ -96,15 +96,33 @@ class _ChildProgressScreenState extends State<ChildProgressScreen> {
                 : l10n.skillsLine(skills.masteredCount, skills.practisingCount),
             style: theme.textTheme.bodyLarge,
           ),
-          if (store.catalogAvailable) ..._skillNames(context, store, skills),
+          if (store.catalogAvailable && suggestions != null)
+            ..._skillNames(context, store, skills, {
+              for (final skill in [
+                ...suggestions.revisit,
+                ...suggestions.ongoing,
+                ...suggestions.other,
+              ])
+                skill.skillId,
+            }),
         ],
 
         // What comes next.
-        if (skills != null && skills.next.isNotEmpty) ...<Widget>[
+        if (suggestions != null && suggestions.revisit.isNotEmpty) ...<Widget>[
+          SectionTitle(l10n.childProgressRevisit),
+          for (final skill in suggestions.revisit) _NextRow(name: skill.name),
+        ],
+        if (suggestions != null && suggestions.ongoing.isNotEmpty) ...<Widget>[
+          SectionTitle(l10n.childProgressOngoing),
+          for (final skill in suggestions.ongoing) _NextRow(name: skill.name),
+        ],
+        if (suggestions != null && suggestions.other.isNotEmpty) ...<Widget>[
           SectionTitle(l10n.childProgressNext),
-          for (final next in skills.next.take(ChildProgressScreen.maxNext))
-            if ((next.name ?? store.skillName(next.skillId)) case final name?)
-              _NextRow(name: name, reason: l10n.nextReason(next.reason)),
+          for (final skill in suggestions.other)
+            _NextRow(
+              name: skill.name,
+              reason: l10n.nextReason(skill.reason ?? ''),
+            ),
         ],
 
         // The latest sessions.
@@ -144,12 +162,14 @@ class _ChildProgressScreenState extends State<ChildProgressScreen> {
     BuildContext context,
     ProgressStore store,
     SkillReport skills,
+    Set<String> shownInSuggestions,
   ) {
     final l10n = context.l10n;
     List<String> names(bool mastered) => <String>[
       for (final skill in skills.worked)
-        if (skill.mastered == mastered)
-          if (store.skillName(skill.skillId) case final name?) name,
+        if (skill.mastered == mastered &&
+            !shownInSuggestions.contains(skill.skillId))
+          ?store.skillName(skill.skillId),
     ].take(ChildProgressScreen.maxSkillNames).toList();
     final mastered = names(true);
     final practising = names(false);
@@ -166,7 +186,7 @@ class _ChildProgressScreenState extends State<ChildProgressScreen> {
 }
 
 class _NextRow extends StatelessWidget {
-  const _NextRow({required this.name, required this.reason});
+  const _NextRow({required this.name, this.reason});
 
   final String name;
   final String? reason;
