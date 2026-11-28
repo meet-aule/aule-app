@@ -62,3 +62,21 @@ jobs:
           path: app/build/app/outputs/flutter-apk/app-debug.apk
           if-no-files-found: error
           retention-days: 7
+      - name: Build the unsigned demo app bundle
+        run: flutter build appbundle --release --no-pub --dart-define=AULE_DEMO=true
+      - name: Verify the app bundle is unsigned
+        run: |
+          bundle=build/app/outputs/bundle/release/app-release.aab
+          jar tf "$bundle" > "$RUNNER_TEMP/aule-bundle-entries"
+          grep -Fxq 'BundleConfig.pb' "$RUNNER_TEMP/aule-bundle-entries"
+          if grep -Eiq '^META-INF/[^/]+\.(SF|RSA|DSA|EC)$' "$RUNNER_TEMP/aule-bundle-entries"; then
+            echo "The demo bundle already contains a signing identity." >&2
+            exit 1
+          fi
+      - name: Save the unsigned test bundle
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: aule-family-demo-release-unsigned
+          path: app/build/app/outputs/bundle/release/app-release.aab
+          if-no-files-found: error
+          retention-days: 7

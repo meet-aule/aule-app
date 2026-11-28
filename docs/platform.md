@@ -74,9 +74,31 @@ When `AULE_GOOGLE_SERVER_CLIENT_ID` is empty, the app asks the platform for it (
 ## 5. Builds
 
 The Flutter workflow checks the locked packages, analyzes Dart, runs the tests
-and builds an ARM64 Android APK with the synthetic demo family. Download
-`aule-family-demo-arm64-debug` from the workflow run artifacts for seven days.
-The APK uses debug signing. Store distribution needs a separate signing setup.
+and builds two artifacts with the synthetic demo family. The workflow run
+keeps them for seven days.
+
+| Artifact | Use |
+|---|---|
+| `aule-family-demo-arm64-debug` | A debug-signed APK for a compatible test device. |
+| `aule-family-demo-release-unsigned` | A release app bundle for the owner to sign with the registered upload key before internal testing on Google Play. |
+
+The workflow has read-only repository permissions and never sends a bundle to
+Play. To sign its downloaded bundle, use the registered key on the signing
+machine. `jarsigner` prompts for the password when needed.
+
+```sh
+jarsigner -keystore /private/path/upload.jks -signedjar aule-demo-internal.aab app-release.aab YOUR_UPLOAD_ALIAS
+jarsigner -verify -verbose -certs aule-demo-internal.aab
+```
+
+Alternatively, to sign during a local release build, create `android/key.properties`
+with `storeFile`, `storePassword`, `keyAlias` and `keyPassword`. Keep the
+keystore outside the checkout, use its absolute path for `storeFile`, and
+restrict the permissions of both files to the signing account. The default
+release build produces an unsigned bundle when the properties file is absent.
+Debug builds use their own test identity. Check the signer fingerprint against
+the upload certificate in Play Console and select an unused version code
+before uploading to the internal-testing track.
 
 Every setting is a `--dart-define`. No default points at production: with no API base the app runs in demo mode.
 

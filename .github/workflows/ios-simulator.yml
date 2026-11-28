@@ -56,5 +56,8 @@ jobs:
           launched=$(xcrun simctl launch "$device" "$identifier")
           pid=${launched##*: }
           sleep 8
-          xcrun simctl spawn "$device" launchctl list | awk -v pid="$pid" -v id="$identifier" '
-            $1 == pid && index($3, id) { found=1 } END { exit !found }'
+          # Simulator processes run on the host. Check the launched process
+          # directly so the health check does not depend on the guest shell.
+          kill -0 "$pid"
+          executable=$(/usr/libexec/PlistBuddy -c 'Print CFBundleExecutable' "$bundle/Info.plist")
+          test "$(basename "$(ps -p "$pid" -o comm=)")" = "$executable"
